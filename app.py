@@ -24,7 +24,7 @@ def classify_image():
     food = FoodClassification()
     prediction = food.main(img_path)
 
-    #returns the result as json (which food it is)
+    # returns the result as json (which food it is)
 
     return jsonify({"food": prediction})
 

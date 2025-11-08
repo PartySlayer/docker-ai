@@ -28,6 +28,9 @@ class FoodClassification:
         """
         Function that parses the image given
         """
-        img = i.load_img(image, target_size =(224,224)) #amount of neurons of our nn
+        img = i.load_img(image, target_size =(224,224)) # amount of neurons of our nn
         self.image = i.img_to_array(img)
         self.image = np.expand_dims(self.image, axis=0) # adds a batch dimension, we train batches in neural networks
+        self.image /= 255.0 #n ormalizing to 0-1, better and faster to compute
+
+    # since it's a different thread no need to name = main
