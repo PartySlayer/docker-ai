@@ -20,4 +20,15 @@ def classify_image():
     img_path = img_directory + "/" + img_file
     img_file.save(img_path)
 
-    
+    #process the image
+    food = FoodClassification()
+    prediction = food.main(img_path)
+
+    #returns the result as json (which food it is)
+
+    return jsonify({"food": prediction})
+
+if __name__ == "__main__":
+    app.run(host = "0.0.0.0", port=5000)
+
+
