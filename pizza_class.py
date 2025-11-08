@@ -34,3 +34,4 @@ class FoodClassification:
         self.image /= 255.0 #n ormalizing to 0-1, better and faster to compute
 
     # since it's a different thread no need to name = main
+    # pizza steak weights are in the keras file (binary)

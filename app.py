@@ -17,7 +17,7 @@ def classify_image():
         os.mkdir(img_directory)
 
     img_file = request.files["image"]
-    img_path = img_directory + "/" + img_file
+    img_path = {img_directory} + "/" + {img_file}
     img_file.save(img_path)
 
     #process the image
